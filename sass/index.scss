@@ -1,0 +1,792 @@
+@import "mixins";
+
+* {
+    padding: 0;
+    margin: 0;
+    // font-family: 'Ubuntu', sans-serif;
+}
+$color1: #fffeff;
+$color2: #1c2230;
+$color3: #41b1d6;
+$color4: #21293c;
+
+body {
+    background-color: $color2;
+    background-image: url("./images/bg-curvy-desktop.svg");
+    background-repeat: no-repeat;
+    font-family: "Ubuntu", sans-serif;
+    background-size: contain;
+    background-position: 0 550px;
+    // overflow: show;
+
+    @include for-phone-only {
+        background-image: url("./images/bg-curvy-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0 252px;
+        overflow-x: hidden index;
+    }
+}
+
+header {
+    width: 100%;
+    background-color: $color2;
+    height: 80px;
+}
+
+.header-container {
+    position: relative;
+    top: 10px;
+    width: 80%;
+    margin: 0 auto;
+    // height:50px;
+    // background-color: blue;
+    display: flex;
+    justify-content: space-between;
+
+    @include for-phone-only {
+        width: 80%;
+       
+    }
+
+    .icon-logo-1 {
+        position: relative;
+        top: 15px;
+
+        img {
+            height: 35px;
+            @include for-phone-only {
+                height: 20px;
+            }
+        }
+    }
+
+    .nav-bar {
+        ul {
+            position: relative;
+            top: 15px;
+            display: flex;
+
+           
+        }
+        li {
+            list-style: none;
+            padding: 5px 10px;
+            color: #fff;
+            font-size: 25px;
+            cursor: pointer;
+
+            @include for-phone-only {
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+.container-1 {
+    width: 100%;
+    // background-color: $color2;
+    // height: 800px;
+}
+
+.background {
+    background-color: transparent;
+    padding-bottom: 30px;
+    margin: 0px auto;
+
+    @include for-phone-only{
+        background-color: #181e2a;
+        margin-top: -70px;
+    } 
+}
+
+.attribute {
+    width: 80%;
+    // max-width: 1440px;
+    margin: 0 auto;
+    // background-color: blue;
+    // height: 800px;
+    text-align: center;
+    @include for-phone-only {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    img {
+        height: 550px;
+
+        @include for-phone-only {
+            height: 300px;
+        }
+    }
+
+    h1 {
+        width: 60%;
+        margin: 10px auto 0 auto;
+        font-size: 40px;
+        color: #fff;
+        @include for-phone-only {
+            width: 75%;
+            font-size: 28px;
+            line-height: 4vh;
+            margin: 20px auto 0 auto;
+        }
+    }
+
+    p {
+        font-size: 20px;
+        width: 46%;
+        margin: 10px auto 0 auto;
+        color: #fff;
+
+        @include for-phone-only {
+            width: 65%;
+            font-size: 16px;
+            line-height: 3vh;
+            padding-top: 80px;
+        }
+    }
+
+    .button {
+        margin: 20px auto 0 auto;
+        padding: 15px 100px 15px 100px;
+        border-radius: 25px;
+        border-style: none;
+        background-color: $color3;
+        color: #fff;
+        cursor: pointer;
+
+        @include for-phone-only {
+            margin: 20px auto 50px auto;
+            padding: 15px 80px 15px 80px;
+            border-radius: 25px;
+            border-style: none;
+        }
+    }
+}
+
+.container-2 {
+    width: 100%;
+    margin-top: 70px;
+    background-color: #181e2a;
+    @include for-phone-only {
+        margin-top: 0;
+    }
+
+    // height:100px;
+}
+
+.boxes {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+
+    @include for-phone-only {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        text-align: center;
+        width: 50%;
+
+        img {
+            height: 90px;
+
+            @include for-phone-only {
+                height: 60px;
+                margin: 20px auto 0 auto;
+            }
+        }
+
+        h2 {
+            margin: 10px auto 0 auto;
+            color: #fff;
+            font-size: 30px;
+
+            @include for-phone-only {
+                width: 110%;
+                font-size: 20px;
+            }
+        }
+
+        p {
+            width:83%;
+            margin: 10px auto 0 auto;
+            font-size: 20px;
+            line-height: 1.5em;
+            color: #fff;
+
+            @include for-phone-only {
+                width: 140%;
+                text-align: center;
+                font-size: 16px;
+                margin-bottom: 40px;
+                margin-left:-30px;
+            }
+        }
+    }
+}
+
+.container-3 {
+    width: 100%;
+    background-color: #181e2a;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+
+@include for-phone-only{
+    padding-bottom: 90px;
+}
+.inner-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+
+    @include for-phone-only{
+        display: flex;
+        flex-direction: column;
+    }
+    }
+}
+
+.illustration {
+    width: 50%;
+    margin: 0 auto;
+    // background-color: #fffeff;
+
+    @include for-phone-only{
+        width: 100%;
+        text-align: center;
+    }
+    img {
+        height: 400px;
+
+        @include for-phone-only {
+            height: 300px;
+        }
+    }
+}
+
+.box-2 {
+    width: 50%;
+    margin-top: 80px;
+    @include for-phone-only {
+        width:100%;
+        
+    }
+
+    h1 {
+        width: 55%;
+        color: #fff;
+        font-size: 40px;
+
+        @include for-phone-only {
+            width:105%;
+            font-size: 25px;
+        }
+    }
+
+    p:nth-child(2) {
+        width: 80%;
+        color: #fff;
+        margin-top: 15px;
+        font-size: 23px;
+
+        @include for-phone-only {
+            width: 90%;
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+
+    p:nth-child(3) {
+        width: 80%;
+        margin-top: 15px;
+        color: #fff;
+        font-size: 23px;
+
+        @include for-phone-only {
+            width: 90%;
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+
+    .arrow {
+        display: flex;
+        margin-top: 10px;
+
+        p {
+            width: fit-content;
+            color: #52b5ba;
+            font-size: 20px;
+            border-bottom: 1px solid #52b5ba;
+
+            @include for-phone-only {
+                font-size: 16px;
+            }
+        }
+
+        img {
+            height: 13px;
+            margin-left: 5px;
+            margin-top: 5px;
+
+            @include for-phone-only {
+                height: 15px;
+                margin-left: 5px;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+.container-4 {
+    width: 100%;
+    background-color: #181e2a;
+
+    @include for-phone-only{
+        padding-bottom: 90px;
+    }
+    
+}
+
+.cards {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    @include for-phone-only {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-1 {
+        width: 28%;
+        // height:200px;
+        background-color: #21293c;
+        // margin-right: 40px;
+        margin-top: 50px;
+        z-index: 99;
+        border-radius: 5px;
+        padding: 21px;
+
+        @include for-phone-only {
+            width: 70%;
+            height: 180px;
+            padding-top: 5px;
+            padding-left: 5px;
+        }
+
+        img {
+            position: relative;
+            left: 25px;
+            top: 10px;
+            height: 35px;
+            border-radius: 30px;
+
+            @include for-phone-only {
+                position: relative;
+                top: -5px;
+            }
+        }
+        p {
+            width: 106%;
+            color: #fff;
+            font-size: 18px;
+            margin-left: 0px;
+            line-height: 25px;
+
+            @include for-phone-only {
+                padding: 30px;
+                font-size: 16px;
+                width: 90%;
+                line-height: 3vh;
+            }
+        }
+
+        p1 {
+            position: relative;
+            left: 28px;
+            bottom: 10px;
+            color: #fff;
+            font-size: 18px;
+
+            @include for-phone-only {
+                position: relative;
+                bottom: 25px;
+                font-size: 16px;
+            }
+        }
+
+        p2 {
+            position: relative;
+            left: 40px;
+            // bottom:40px;
+            color: #fff;
+            font-size: 10px;
+            margin-bottom: 5px;
+
+            @include for-phone-only {
+                position: relative;
+                bottom: 60px;
+            }
+        }
+    }
+}
+
+.quotes {
+    width: 80%;
+    margin: 0 auto;
+
+    img {
+        position: relative;
+        bottom: 235px;
+        left: 15px;
+
+        @include for-phone-only {
+            height: 25px;
+            bottom: 740px;
+        }
+    }
+}
+
+.container-5 {
+    width: 100%;
+    background-color: #181e2a;
+   }
+
+.Rectangle {
+    width: 60%;
+    margin: 0px auto 0 auto;
+    padding: 50px 0;
+    background-color:#1C2230;
+    border-radius: 5px;
+    z-index: 99;
+    color: #fff;
+    position: relative;
+    box-shadow: 1px 4px 5px #111;
+
+    @include for-phone-only {
+        width:90%;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1c2230;
+    }
+
+    h1 {
+        
+        font-size: 32px;
+        text-align: center;
+
+        @include for-phone-only {
+            font-size: 25px;
+            width: 63%;
+            margin: 20px auto 10px auto;
+        }
+    }
+
+    p {
+        text-align: center;
+        width: 70%;
+        margin: 0px auto;
+        padding: 5px 10px 10px 10px;
+        font-size: 20px;
+
+        @include for-phone-only {
+            width: 75%;
+            font-size: 17px;
+            line-height: 27px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .row {
+        display: flex;
+        width: 90%;
+        margin: 20px auto;
+        justify-content: space-between;
+
+        @include for-phone-only {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input1 {
+            width: 70%;
+            border: none;
+            border-radius: 23px;
+            color: red;
+            padding-left: 5px;
+            cursor: pointer;
+
+            @include for-phone-only {
+                width: 100%;
+                height: 50px;
+               
+            }
+        }
+
+        .button-2 {
+            width: 25%;
+            position: relative;
+            padding: 13px 35px;
+            border-radius: 23px;
+            border-style: none;
+            background-color: $color3;
+            color: #fff;
+            cursor: pointer;
+
+            @include for-phone-only {
+                width: 100%;
+                height: 50px;
+                margin-top:40px;
+            }
+        }
+    }
+}
+
+// .container-6{
+//     background-color: #0c1524;
+//     width:100%;
+//     position: relative;
+//     margin-top: -180px;
+
+// }
+
+// .submit-mainly{
+//     width:80%;
+//     margin: 0 auto;
+//     background-color: #0C1524;
+//             color: #fff;
+
+//     .icon-logo-2{
+//         position: relative;
+//         top:105px;
+//         left:30px;
+//         img{
+//             height: 45px;
+//         }
+//     }
+
+//            bottom:90px;
+//            height:17px;
+//         }
+
+//         p{
+//            position: relative;
+//            left:500px;
+//            bottom: 110px;
+//            font-size: 13px;
+//         }
+//     }
+// }
+
+//    .email{
+
+//     img{
+//         position: relative;
+//         left:460px;
+//         bottom:90px;
+//         height:15px;
+//      }
+
+//      p{
+//         position: relative;
+//         left:500px;
+//         bottom: 110px;
+//         font-size: 13px;
+//      }
+// }
+
+// .content{
+//     display: flex;
+//     justify-content: flex-end;
+// }
+
+// .content ul li{
+//     display: flex;
+//     position: relative;
+//     right:180px;
+//     bottom:175px;
+//     margin-right:50px;
+//     line-height: 5vh;
+//     font-size: 14px;
+// }
+
+// .android-apps{
+//     display: flex;
+//     justify-content: flex-end;
+
+//     img{
+//         position: relative;
+//         bottom:320px;
+//         right:50px;
+//         height:25px;
+//         padding-right:5px;
+
+//     }
+// }
+
+.footer {
+    width: 100%;
+    // margin-top: -180px;
+    margin-top: -110px;
+    background-color: #0c1524;
+    padding-bottom: 150px;
+    bottom: 0;
+
+    @include for-phone-only {
+        width: 100%;
+        margin-top: -180px;
+    }
+
+    .container-footer {
+        position: relative;
+        top: 130px;
+        width: 80%;
+        margin: 0 auto;
+        color: #fff;
+    background-color: #0c1524;
+
+        // background-color: rebeccapurple;
+        // margin-top: 150px;
+   
+        .footer-logo {
+            img {
+            margin-top: 170px;
+            margin-bottom: 20px;
+
+            @include for-phone-only {
+                 height: 60px;
+                 margin-left: 20px;
+                }
+            }
+        }
+
+        .content-footer {
+            width: 100%;
+            // margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+
+            @include for-phone-only {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .about-content {
+                width: 30%;
+                display: flex;
+
+                @include for-phone-only {
+                    width: 90%;
+                }
+
+                img {
+                    height: 30px;
+                    width: auto;
+                    margin-right: 10px;
+
+                    @include for-phone-only {
+                        width: auto;
+                        margin: 30px auto auto 20px;
+                    }
+                }
+                p {
+                    line-height: 2em;
+                    margin-top: -10px;
+                    font-size: 18px;
+
+                    @include for-phone-only {
+                        line-height: 3vh;
+                        font-size: 17px;
+                        margin: 25px 20px 20px 20px;
+                    }
+                }
+            }
+
+            .links {
+                .row {
+                    display: flex;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+
+                    @include for-phone-only {
+                        width: 100%;
+                        margin: 5px 20px 20px;
+                    }
+
+                    img {
+                        margin-right: 10px;
+
+                        @include for-phone-only {
+                            height: 14px;
+                            margin-right: 17px;
+                        }
+                    }
+
+                    p {
+                        font-size: 20px;
+
+                        @include for-phone-only {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+
+            .lists {
+                ul {
+                    li {
+                        list-style: none;
+                        margin-bottom: 5px;
+                        cursor: pointer;
+                        font-size: 18px;
+
+                        @include for-phone-only {
+                            line-height: 2px;
+                            font-size: 17px;
+                            margin: 40px 20px;
+                        }
+                    }
+                }
+            }
+            .icons {
+                display: flex;
+                cursor: pointer;
+
+                @include for-phone-only {
+                    width: 100%;
+                    justify-content: center;
+                }
+
+                img {
+                    height: 35px;
+                    margin: 0 5px;
+
+                    @include for-phone-only {
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
